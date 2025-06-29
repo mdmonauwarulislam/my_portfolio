@@ -7,10 +7,10 @@ import {
   project3Mobile,
   project4Laptop,
   project4Mobile,
-  // project5Laptop,
-  // project5Mobile,
-  // project6Laptop,
-  // project6Mobile,
+  project5Laptop,
+  project5Mobile,
+  project6Laptop,
+  project6Mobile,
 } from "./projectImages";
 
 export const projectData = [
@@ -46,20 +46,20 @@ export const projectData = [
     codeLink: "https://github.com/mdmonauwarulislam/mern-blog-web-app",
     liveLink: "https://mern-blog-web-app-sooty.vercel.app/",
   },
-  // {
-  //   id: 5,
-  //   image: project5Laptop,
-  //   transitionImage: project5Mobile,
-  //   title: "Gym Fitness Website",
-  //   codeLink: "https://github.com/monciego/intrepide",
-  //   liveLink: "https://intrepide.netlify.app/",
-  // },
-  // {
-  //   id: 6,
-  //   image: project6Laptop,
-  //   transitionImage: project6Mobile,
-  //   title: "Space Tourism",
-  //   codeLink: "https://github.com/monciego/space-tourism",
-  //   liveLink: "https://spacetourism-monciego.netlify.app/",
-  // },
+  {
+    id: 5,
+    image: project5Laptop,
+    transitionImage: project5Mobile,
+    title: "Hospital Management DashBoard",
+    codeLink: "https://github.com/mdmonauwarulislam/hms-frontend.git",
+    liveLink: "https://hms-frontend-nine.vercel.app/login",
+  },
+  {
+    id: 6,
+    image: project6Laptop,
+    transitionImage: project6Mobile,
+    title: "E Commerce Web App",
+    codeLink: "https://github.com/mdmonauwarulislam/E-Commerce-Web-Application.git",
+    liveLink: "https://github.com/mdmonauwarulislam/E-Commerce-Web-Application.git",
+  },
 ];
