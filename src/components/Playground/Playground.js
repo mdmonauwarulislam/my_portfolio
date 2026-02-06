@@ -12,9 +12,9 @@ const Playground = () => {
   return (
     <StyledPlayground id="playground">
       <SectionHeading>
-        <SectionTitle number="03">Playground</SectionTitle>
+        <SectionTitle $number="03">Playground</SectionTitle>
       </SectionHeading>
-      <StyledParagraph dark="true" textAlign="center">
+      <StyledParagraph $dark={true} $textAlign="center">
         A collection of projects that I've created for practice and leisure.
       </StyledParagraph>
       <PlaygroundProjectContainer>

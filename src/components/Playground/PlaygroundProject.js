@@ -18,11 +18,11 @@ const PlaygroundProjectComponent = ({
   hasLink,
 }) => {
   return (
-    <PlaygroundProjectWrapper hasLink={hasLink}>
-      <PlaygroundProject hasLink={hasLink}>
+    <PlaygroundProjectWrapper $hasLink={hasLink}>
+      <PlaygroundProject $hasLink={hasLink}>
         <PlaygroundProjectImageContainer
           href={liveLink}
-          hasLink={hasLink}
+          $hasLink={hasLink}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -30,10 +30,10 @@ const PlaygroundProjectComponent = ({
         </PlaygroundProjectImageContainer>
         <PlaygroundProjectDetails>
           <PlaygroundProjectName>{projectName}</PlaygroundProjectName>
-          <LinkWrapper hasLink={hasLink}>
+          <LinkWrapper $hasLink={hasLink}>
             <PlayGroundProjectLive
               href={liveLink}
-              hasLink={hasLink}
+              $hasLink={hasLink}
               target="_blank"
               rel="noopener noreferrer"
             >

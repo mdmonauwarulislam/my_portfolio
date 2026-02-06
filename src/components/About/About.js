@@ -12,13 +12,13 @@ import { SectionHeading, SectionTitle } from "../styles/SectionHeading";
 import { StyledParagraph } from "../styles/Typography.styled";
 import myImage from "../../assets/my-image.jpg"
 import downloadIcon from "../../assets/icons/download-icon.svg";
-import resume from "../../assets/monauwarulislam_resume.pdf";
+import resume from "../../assets/monauwarul_resume.pdf";
 
 const About = () => {
   return (
     <StyledAbout id="about">
-      <SectionHeading dark="true" mb="3rem">
-        <SectionTitle dark="true" number="02">
+      <SectionHeading $mb="3rem">
+        <SectionTitle $dark={true} $number="02">
           About Me
         </SectionTitle>
       </SectionHeading>
@@ -28,25 +28,31 @@ const About = () => {
         </AboutImageContainer>
         <AboutDetailsContainer>
           <StyledParagraph>
-            My name is Md Monauwarul Islam, currently pursuing Bachelor of
-            Technology in Computer Science from Maulana Azad National Urdu University, Hyderabad. I
-            am a passionate Full Stack Developer based in INDIA.
+            My name is Md Monauwarul Islam, a B.Tech graduate in Computer Science Engineering 
+            from Maulana Azad National Urdu University, Hyderabad. I am a 
+            Full-Stack Developer with hands-on backend development experience, working as a 
+            Backend Developer Intern at WhatBytes, where I've optimized backend services and 
+            improved system performance by 30%. I've also successfully delivered freelance 
+            projects, building custom web solutions for various clients.
           </StyledParagraph>
           <StyledParagraph>
-            I love to design and create responsive websites or web apps from
-            scratch. The technologies, tools and languages I am using to build
-            my projects are HTML, CSS, JavaScript, REACT JS, TailwindCSS,
-            Bootstrap, Node.js, Express.js, MongoDB, MySQL, Git and GitHub, Figma and VS Code.
+            I specialize in building scalable web applications and optimizing backend performance 
+            using the MERN stack. My technical expertise includes React.js, Next.js, Redux Toolkit, 
+            Node.js, Express.js, RESTful APIs, MongoDB, SQL, TypeScript, and modern development 
+            tools like Git, Docker, Prisma ORM, Postman, and Firebase. I focus on creating 
+            user-friendly applications with robust backend architecture, implementing efficient API 
+            solutions, JWT authentication, and performance optimizations like Redis caching.
           </StyledParagraph>
           <StyledParagraph>
-            I have eagerness to learn something new every day and I love to
-            share my knowledge to my fellow students and developers. And I am
-            looking forward to talk with you!
+            With 200+ LeetCode problems solved and 10+ full-stack applications deployed, I have a 
+            proven track record of delivering production-ready solutions. I'm passionate about 
+            learning new technologies, sharing knowledge with fellow developers, and contributing 
+            to innovative projects. Let's connect and build something amazing together!
           </StyledParagraph>
           <Resume>
             <ResumeLink
               href={resume}
-              icon={downloadIcon}
+              $icon={downloadIcon}
               download="Md_Monauwarul_Islam_Resume"
             >
               Download Resume

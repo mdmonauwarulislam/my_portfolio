@@ -17,6 +17,11 @@ export const TechnologiesIcons = styled.div`
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 3rem;
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
 `;
 
 export const TechnologyIcon = styled.img`
@@ -24,5 +29,9 @@ export const TechnologyIcon = styled.img`
 
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     height: 24px;
+  }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    height: 28px;
   }
 `;

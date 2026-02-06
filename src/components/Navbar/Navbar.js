@@ -50,7 +50,6 @@ const Navbar = () => {
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
             offset={-85.26}
           >
             Home
@@ -64,7 +63,6 @@ const Navbar = () => {
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
             offset={-85.26}
           >
             Projects
@@ -78,7 +76,6 @@ const Navbar = () => {
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
             offset={-85.26}
           >
             About
@@ -92,7 +89,6 @@ const Navbar = () => {
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
             offset={-85.26}
           >
             Playground
@@ -121,9 +117,9 @@ const Navbar = () => {
       </StyledCTA>
 
       <Menu onClick={toggle}>
-        <Line width="1.5rem" />
+        <Line $width="1.5rem" />
         <Line />
-        <Line width="1.5rem" ml="0.5rem" />
+        <Line $width="1.5rem" $ml="0.5rem" />
       </Menu>
 
       <MobileMenu isOpen={isOpen} toggle={toggle}></MobileMenu>

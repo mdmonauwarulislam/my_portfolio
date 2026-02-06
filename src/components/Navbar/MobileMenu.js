@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   CloseIcon,
   Icon,
@@ -13,8 +13,20 @@ import {
 } from "../styles/MobileMenu.styled";
 
 const MobileMenu = ({ isOpen, toggle }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   return (
-    <MobileMenuContainer isOpen={isOpen} toggle={toggle}>
+    <MobileMenuContainer $isOpen={isOpen}>
       <Icon onClick={toggle}>
         <CloseText>Close</CloseText>
         <CloseIcon />

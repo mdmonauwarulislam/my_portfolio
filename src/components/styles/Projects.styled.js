@@ -19,17 +19,30 @@ export const Flex = css`
 `;
 
 export const StyledProjects = styled.section`
-  background-color: ${({ theme }) => theme.backgroundColor.light};
-  color: ${({ theme }) => theme.color.darkGray};
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  color: ${({ theme }) => theme.color.text};
 `;
 
 export const ProjectsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    grid-template-columns: 1fr;
+  }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
 `;
 
 export const ProjectImage = styled.img`
@@ -67,6 +80,14 @@ export const ProjectDetails = styled.div`
   transition: 0.6s ease;
   margin-top: 2rem;
   z-index: 5;
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 4rem 2rem;
+  }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding: 3rem 1.5rem;
+  }
 `;
 
 export const ProjectTitle = styled.span``;
@@ -88,6 +109,12 @@ export const ProjectCodeLink = styled.a`
   ${LinkName}:hover::after {
     width: 100%;
   }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    left: 7rem;
+    bottom: 1.5rem;
+    font-size: 13px;
+  }
 `;
 
 export const ProjectLiveLink = styled.a`
@@ -105,30 +132,44 @@ export const ProjectLiveLink = styled.a`
   ${LinkName}:hover::after {
     width: 100%;
   }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    left: 1.5rem;
+    bottom: 1.5rem;
+    font-size: 13px;
+  }
 `;
 
 export const ProjectCard = styled.article`
-  background: #fff;
-  width: 32rem;
-  height: 23rem;
+  background: #ffffff;
+  width: 100%;
+  height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
+  box-shadow: ${({ theme }) => theme.shadows.medium};
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   &::after {
     content: "";
     position: absolute;
     inset: 0 0 0 0;
-    background: rgb(13, 14, 14, 0.1);
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 11, 13, 0.05) 100%);
     z-index: 2;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
-    box-shadow: 0 2px 15px rgba(13, 14, 14) 15%;
+    transform: translateY(-8px);
+    box-shadow: ${({ theme }) => theme.shadows.hover};
+  }
+
+  &:hover::after {
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 11, 13, 0.03) 100%);
   }
 
   &:hover ${ProjectDetails} {
@@ -141,10 +182,12 @@ export const ProjectCard = styled.article`
     opacity: 1;
   }
 
-  @media all and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 25rem;
-  }
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: 100%;
+    height: 380px;
+  }
+  
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    height: 350px;
+    border-radius: 12px;
   }
 `;

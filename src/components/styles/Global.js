@@ -9,11 +9,20 @@ const GlobalStyles = createGlobalStyle`
 
     html{
     scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
     }
 
     body {
     font-size: 100%;
-    font-family: ${({ theme }) => theme.fonts.montserrat}
+    font-family: ${({ theme }) => theme.fonts.montserrat};
+    background: ${({ theme }) => theme.backgroundColor.light};
+    color: ${({ theme }) => theme.color.text};
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100vw;
     }
 
     img {
@@ -27,14 +36,21 @@ const GlobalStyles = createGlobalStyle`
     a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     section,
     footer{
-    padding: 4.32875rem 5rem 7.6125rem 5rem;
+    padding: 5rem 5rem 8rem 5rem;
+    max-width: 100vw;
+    overflow-x: hidden;
 
     @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        padding: 7.6125rem 2.5rem 7.6125rem 2.5rem;
+        padding: 4rem 2.5rem 6rem 2.5rem;
+    }
+    
+    @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        padding: 3rem 1.5rem 4rem 1.5rem;
     }
     }
 `;

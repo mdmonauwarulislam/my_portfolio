@@ -43,29 +43,27 @@ const Home = () => {
         </p>
         <StyledButtonsContainer>
           <StyledButton
-            icon={projectIcon}
+            $icon={projectIcon}
             to="projects"
             smooth={true}
             duration={0}
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
+
             offset={-50}
           >
             <span>Projects</span>
           </StyledButton>
           <StyledButton
-            icon={aboutIcon}
-            secondary="true"
-            content="B"
+            $icon={aboutIcon}
+            $secondary={true}
             to="about"
             smooth={true}
             duration={0}
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
             offset={-50}
           >
             <span>About me</span>

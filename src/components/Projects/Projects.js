@@ -9,9 +9,9 @@ const Projects = () => {
   return (
     <StyledProjects id="projects">
       <SectionHeading>
-        <SectionTitle number="01">Projects</SectionTitle>
+        <SectionTitle $number="01">Projects</SectionTitle>
       </SectionHeading>
-      <StyledParagraph dark="true" textAlign="center">
+      <StyledParagraph $dark={true} $textAlign="center">
         Selected projects I've worked on recently.{" "}
         <StyledLink
           href="https://github.com/mdmonauwarulislam"

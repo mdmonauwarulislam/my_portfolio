@@ -19,8 +19,8 @@ export const projectData = [
     image: project1Laptop,
     transitionImage: project1Mobile,
     title: "Tech Help",
-    codeLink: "https://github.com/mdmonauwarulislam/Tech_Help_Frontend",
-    liveLink: "https://tech-help.vercel.app/",
+    codeLink: "https://github.com/mdmonauwarulislam/jobpulse.io",
+    liveLink: "https://jobpulse-io.vercel.app/",
   },
   {
     id: 2,
